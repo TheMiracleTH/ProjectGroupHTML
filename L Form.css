@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(98, 153, 204);
+}
+.registation{
+    font-size: 20pt;
+}
+.fp{
+    font-size: 20pt;
+}
+.password{
+    height: 30px;
+    font-size: 15pt;
+}
+.username{
+    height: 30px;
+    font-size: 15pt;
+}
+.user{
+    font-size: 20pt;
+}
+.pass{
+    font-size: 20pt;
+}
+.log{
+    height: 30px;
+    font-size: 15pt;
+}
