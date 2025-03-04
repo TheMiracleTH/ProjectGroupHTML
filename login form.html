@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>Login & Registration</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="stylesheet" href="L Form.css">
+    <script src="Login.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="flip-card" id="flip-card">
-            <div class="card login">
+        <div class="flip-card">
+            <div id="login-card" class="card active">
                 <h2>Login</h2>
-                <input type="email" id="login-email" placeholder="Email">
-                <p class="error" id="login-email-error"></p>
-                <input type="password" id="login-password" placeholder="Password">
-                <p class="error" id="login-password-error"></p>
+                <input type="text" id="login-user" placeholder="Username">
+                <input type="password" id="login-pass" placeholder="Password">
                 <button onclick="validateLogin()">Login</button>
                 <div class="switch" onclick="flipToRegister()">Create an account</div>
-                <div class="switch" onclick="flipToForgot()">Forgot password?</div>
+                <div class="switch" onclick="flipToReset()">Forgot password?</div>
             </div>
-            <div class="card register">
+            <div id="register-card" class="card">
                 <h2>Register</h2>
-                <input type="text" id="register-name" placeholder="Full Name">
-                <p class="error" id="register-name-error"></p>
-                <input type="email" id="register-email" placeholder="Email">
-                <p class="error" id="register-email-error"></p>
-                <input type="password" id="register-password" placeholder="Password">
-                <p class="error" id="register-password-error"></p>
+                <input type="text" id="reg-user" placeholder="Username">
+                <input type="password" id="reg-pass" placeholder="Password">
                 <button onclick="validateRegister()">Register</button>
                 <div class="switch" onclick="flipToLogin()">Already have an account?</div>
             </div>
-            <div class="card forgot">
-                <h2>Forgot Password</h2>
-                <input type="email" id="forgot-email" placeholder="Enter your email">
-                <p class="error" id="forgot-email-error"></p>
-                <button onclick="validateForgot()">Reset Password</button>
-                <div class="switch" onclick="flipToLogin()">Back to Login</div>
+            <div id="reset-card" class="card">
+                <h2>Reset Password</h2>
+                <input type="text" id="reset-user" placeholder="Enter your Username">
+                <input type="password" id="new-password" placeholder="New Password">
+                <input type="password" id="confirm-password" placeholder="Confirm Password">
+                <button onclick="resetPassword()">Reset Password</button>
+                <div class="switch" onclick="flipToLogin()">Back to login</div>
             </div>
         </div>
     </div>
