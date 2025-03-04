@@ -29,7 +29,6 @@ function validateLogin() {
         alert("Invalid username or password.");
         return;
     }
-
     alert("Login successful!");
 }
 function validateRegister() {
@@ -56,7 +55,6 @@ function resetPassword() {
     let user = document.getElementById("reset-user").value.trim();
     let newPassword = document.getElementById("new-password").value.trim();
     let confirmPassword = document.getElementById("confirm-password").value.trim();
-
     if (user === "" || newPassword === "" || confirmPassword === "") {
         alert("Please fill in all fields.");
         return;
@@ -81,7 +79,6 @@ function resetPassword() {
     alert("Password has been reset successfully!");
     flipToLogin();
 }
-=======
 function flipToRegister() {
     document.getElementById("flip-card").classList.add("flipped");
 }
@@ -161,4 +158,3 @@ function validateRegister() {
 function validateForgot() {
     alert("Password reset link has been sent to your email!");
 }
->>>>>>> faf96e8dd33820b06e5aa3edd0a9c10b059a2c23
