@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LOGIN</title>
-    <link rel="stylesheet" href="/L Form.css"/>
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <form>
-        <div>
-            <label for="username" class="user"><b>Username:</b></label><br>
-            <input type="text" id="username" name="username" placeholder="Enter Username" required class="username"><br>
+    <div class="container">
+        <div class="flip-card" id="flip-card">
+            <div class="card login">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email">
+                <p class="error" id="login-email-error"></p>
+                <input type="password" id="login-password" placeholder="Password">
+                <p class="error" id="login-password-error"></p>
+                <button onclick="validateLogin()">Login</button>
+                <div class="switch" onclick="flipToRegister()">Create an account</div>
+                <div class="switch" onclick="flipToForgot()">Forgot password?</div>
+            </div>
+            <div class="card register">
+                <h2>Register</h2>
+                <input type="text" id="register-name" placeholder="Full Name">
+                <p class="error" id="register-name-error"></p>
+                <input type="email" id="register-email" placeholder="Email">
+                <p class="error" id="register-email-error"></p>
+                <input type="password" id="register-password" placeholder="Password">
+                <p class="error" id="register-password-error"></p>
+                <button onclick="validateRegister()">Register</button>
+                <div class="switch" onclick="flipToLogin()">Already have an account?</div>
+            </div>
+            <div class="card forgot">
+                <h2>Forgot Password</h2>
+                <input type="email" id="forgot-email" placeholder="Enter your email">
+                <p class="error" id="forgot-email-error"></p>
+                <button onclick="validateForgot()">Reset Password</button>
+                <div class="switch" onclick="flipToLogin()">Back to Login</div>
+            </div>
         </div>
-        <div>
-            <label for="password" class="pass"><b>Password:</b></label><br>
-            <input type="password" id="password" name="password" placeholder="Enter Password" name="password" required class="password"><br>
-        </div>
-        <div>
-            <button type="submit" class="log">Login</button><br>
-        </div>
-        <div>
-            <a href="/register.html" class="registation">Register</a>
-        </div>
-        <div>
-            <a href="/forget_password.html" class="fp">Forgot password?</a>
-        </div>
-      </form>
+    </div>
 </body>
 </html>
