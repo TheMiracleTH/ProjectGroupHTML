@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoginSystem</title>
-    <link rel="stylesheet" href="L Form.css">
-    <script src="Login.js"></script>
+    <title>Login System</title>
+    <link rel="stylesheet" href="./L Form.css">
+    <script src="./Login.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="flip-card">
-            <div id="login-card" class="card active">
-                <h2>Login</h2>
-                <input type="text" id="login-user" placeholder="Username">
-                <input type="password" id="login-pass" placeholder="Password">
-                <button onclick="validateLogin()">Login</button>
-                <div class="switch" onclick="flipToRegister()">Create an account</div>
-                <div class="switch" onclick="flipToReset()">Forgot password?</div>
-            </div>
-            <div id="register-card" class="card">
-                <h2>Register</h2>
-                <input type="text" id="reg-user" placeholder="Username">
-                <input type="password" id="reg-pass" placeholder="Password">
-                <button onclick="validateRegister()">Register</button>
-                <div class="switch" onclick="flipToLogin()">Already have an account?</div>
-            </div>
-            <div id="reset-card" class="card">
-                <h2>Reset Password</h2>
-                <input type="text" id="reset-user" placeholder="Enter your Username">
-                <input type="password" id="new-password" placeholder="New Password">
-                <input type="password" id="confirm-password" placeholder="Confirm Password">
-                <button onclick="resetPassword()">Reset Password</button>
-                <div class="switch" onclick="flipToLogin()">Back to login</div>
+    <body>
+        <div class="container">
+            <div class="flip-card">
+                <div id="login-card" class="card active">
+                    <h2>Login</h2>
+                    <input type="text" id="login-user" placeholder="Username">
+                    <input type="password" id="login-pass" placeholder="Password">
+                    <button onclick="validateLogin()">Login</button>
+                    <div class="switch" onclick="flipToRegister()">Create an account</div>
+                    <div class="switch" onclick="flipToReset()">Forgot password?</div>
+                </div>
+                <div id="register-card" class="card">
+                    <h2>Register</h2>
+                    <input type="text" id="reg-user" placeholder="Username">
+                    <input type="password" id="reg-pass" placeholder="Password">
+                    <button onclick="validateRegister()">Register</button>
+                    <div class="switch" onclick="flipToLogin()">Already have an account?</div>
+                </div>
+                <div id="reset-card" class="card">
+                    <h2>Reset Password</h2>
+                    <input type="text" id="reset-user" placeholder="Enter your Username">
+                    <input type="password" id="new-password" placeholder="New Password">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password">
+                    <button onclick="resetPassword()">Reset Password</button>
+                    <div class="switch" onclick="flipToLogin()">Back to login</div>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 </html>
